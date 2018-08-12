@@ -1,0 +1,116 @@
+#welcome, #factsname, #galleryname, #guestbookname {
+  color: darkorange;
+  font-weight: bold;
+  font-variant: small-caps;
+}
+
+@media (max-width: 768px) {
+  #welcome::before {
+    content: "Hello!";
+  }
+}
+@media (min-width: 768px) {
+  #welcome::before {
+    content: "Hello,";
+  }
+}
+@media (min-width: 992px) {
+  #welcome::before {
+    content: "Hello, bunny lovers!";
+  }
+}
+
+@media (max-width: 768px) {
+  #welcome::after {
+    content: "";
+  }
+}
+@media (min-width: 768px) {
+  #welcome::after {
+    content: "bunny lovers!";
+  }
+}
+@media (min-width: 992px) {
+  #welcome::after {
+    content: "";
+  }
+}
+
+@media (max-width: 768px) {
+  #galleryname::before {
+    content: "Gallery";
+  }
+}
+@media (min-width: 768px) {
+  #galleryname::before {
+    content: "Bunny Gallery";
+  }
+}
+@media (min-width: 992px) {
+  #galleryname::before {
+    content: "The Bun Bun Gallery";
+  }
+}
+
+@media (max-width: 768px) {
+  #guestbookname::before {
+    content: "Guestbook";
+  }
+}
+@media (min-width: 768px) {
+  #guestbookname::before {
+    content: "Bunny Guestbook";
+  }
+}
+@media (min-width: 992px) {
+  #guestbookname::before {
+    content: "The Bunny-Approved Guestbook";
+  }
+}
+
+.icon {
+  height: 50px;
+  width: 50px;
+}
+
+.navicon {
+  height: 30px;
+  width: 30px;
+  margin-right: 5px;
+}
+
+.jumbotron p {
+  color: gray;
+  font-size: 16pt;
+  font-weight: bold;
+}
+.jumbotron p a {
+  color: darkorange;
+}
+
+/*
+table, th, td {
+   border: 1px solid black;
+}
+*/
+td .icon {
+  margin-right: 10px;
+}
+
+td > a:visited, td > a:hover, td > a:link {
+  font-size: 20pt;
+}
+
+td > a:link {
+  color: black;
+}
+
+td > a:hover {
+  color: orange;
+}
+
+td > a:visited {
+  color: darkorange;
+}
+
+/*# sourceMappingURL=style.css.map */

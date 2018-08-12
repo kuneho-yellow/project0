@@ -1,0 +1,126 @@
+// Used by Bootstrap
+$small-screen: 576px;
+$med-screen: 768px;
+$large-screen: 992px;
+
+%jumbotrontext {
+	color: darkorange;
+	font-weight:bold;
+	font-variant: small-caps;
+}
+
+#welcome, #factsname, #galleryname, #guestbookname {
+	@extend %jumbotrontext;
+}
+
+#welcome::before {
+	@media (max-width: $med-screen)
+	{
+		content: "Hello!";
+	}
+	@media (min-width: $med-screen)
+	{
+		content: "Hello,";
+	}
+	@media (min-width: $large-screen)
+	{
+		content: "Hello, bunny lovers!";
+	}
+}
+
+#welcome::after
+{
+	@media (max-width: $med-screen)
+	{
+		content: "";
+	}
+	@media (min-width: $med-screen)
+	{
+		content: "bunny lovers!";
+	}
+	@media (min-width: $large-screen)
+	{
+		content: "";
+	}
+}
+
+#galleryname::before {
+	@media (max-width: $med-screen)
+	{
+		content: "Gallery";
+	}
+	@media (min-width: $med-screen)
+	{
+		content: "Bunny Gallery";
+	}
+	@media (min-width: $large-screen)
+	{
+		content: "The Bun Bun Gallery";
+	}
+}
+
+#guestbookname::before {
+	@media (max-width: $med-screen)
+	{
+		content: "Guestbook";
+	}
+	@media (min-width: $med-screen)
+	{
+		content: "Bunny Guestbook";
+	}
+	@media (min-width: $large-screen)
+	{
+		content: "The Bunny-Approved Guestbook";
+	}
+}
+
+.icon {
+	height: 50px;
+	width: 50px;
+}
+
+.navicon {
+	height: 30px;
+	width: 30px;
+	margin-right: 5px;
+}
+
+.jumbotron p {
+	color: gray;
+	font-size: 16pt;
+	font-weight: bold;
+	a {
+		color: darkorange;
+	}
+}
+
+/*
+table, th, td {
+   border: 1px solid black;
+}
+*/
+
+td {
+	.icon {
+		margin-right: 10px;
+	}
+}
+
+%tablelink {
+	font-size: 20pt;
+}
+
+td > a:link {
+	@extend %tablelink;
+	color: black;
+}
+
+td > a:hover {
+	@extend %tablelink;
+	color: orange;
+}
+
+td > a:visited {
+	@extend %tablelink;
+	color: darkorange;
+}
